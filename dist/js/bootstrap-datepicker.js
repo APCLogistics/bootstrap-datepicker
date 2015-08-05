@@ -1023,6 +1023,7 @@
 
 		click: function(e){
 			e.preventDefault();
+			e.stopPropagation();
 			var target = $(e.target).closest('span, td, th'),
 				year, month, day;
 			if (target.length === 1){
@@ -1418,12 +1419,12 @@
 				l = this.inputs.length;
 			if (i === -1)
 				return;
-
+/*
 			$.each(this.pickers, function(i, p){
 				if (!p.getUTCDate())
 					p.setUTCDate(new_date);
 			});
-
+*/
 			if (new_date < this.dates[j]){
 				// Date being moved earlier/left
 				while (j >= 0 && new_date < this.dates[j]){

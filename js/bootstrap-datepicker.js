@@ -1435,12 +1435,12 @@
 				l = this.inputs.length;
 			if (i === -1)
 				return;
-
+/*
 			$.each(this.pickers, function(i, p){
 				if (!p.getUTCDate())
 					p.setUTCDate(new_date);
 			});
-
+*/
 			if (new_date < this.dates[j]){
 				// Date being moved earlier/left
 				while (j >= 0 && new_date < this.dates[j]){
